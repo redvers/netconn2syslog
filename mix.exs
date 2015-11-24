@@ -28,7 +28,8 @@ defmodule Netconn2syslog.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:cbserverapi2, path: "../cbserverapi2"},
+ #     {:cbserverapi2, path: "../cbserverapi2"},
+      {:cbserverapi2, git: "https://github.com/redvers/cbserverapi2.git"},
       {:gproc, "~> 0.5.0"}
     ]
   end
