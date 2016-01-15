@@ -14,7 +14,7 @@ defmodule Netconn2syslog.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :cbserverapi2, :gproc]]
+    [applications: [:logger, :cbserverapi2, :gproc, :hackney, :exjsx, :exprotobuf, :gpb]]
   end
 
   # Dependencies can be Hex packages:
@@ -28,8 +28,10 @@ defmodule Netconn2syslog.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
- #     {:cbserverapi2, path: "../cbserverapi2"},
       {:cbserverapi2, git: "https://github.com/redvers/cbserverapi2.git"},
+      {:hackney, "== 1.4.4"},
+      {:exjsx, "~> 3.1"},
+      {:exrm, "~> 1.0.0-rc7"},
       {:gproc, "~> 0.5.0"}
     ]
   end
